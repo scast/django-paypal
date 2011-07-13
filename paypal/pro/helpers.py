@@ -16,8 +16,8 @@ from paypal.pro.signals import *
 from paypal.pro.models import PayPalNVP, L
 from paypal.pro.exceptions import PayPalFailure
 
-TEST = getattr(settings, "PAYPAL_TEST", True)
-USER = settings.PAYPAL_WPP_USER 
+TEST = getattr(settings, "PAYPAL_TEST", settings.DEBUG)
+USER = settings.PAYPAL_WPP_USER
 PASSWORD = settings.PAYPAL_WPP_PASSWORD
 SIGNATURE = settings.PAYPAL_WPP_SIGNATURE
 VERSION = 54.0
